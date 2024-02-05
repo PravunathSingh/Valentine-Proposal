@@ -1,6 +1,7 @@
 import React from 'react';
 import Confetti from 'react-confetti';
 import { isMobile } from 'react-device-detect';
+import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 const heartBreak = [
   'Are you sure? 😢',
@@ -151,7 +152,25 @@ const App = () => {
             </button>
           )}
         </div>
-      ) : null}
+      ) : (
+        <div className='max-w-max mx-auto'>
+          <AddToCalendarButton
+            trigger='click'
+            buttonStyle='3d'
+            name={`Valentine's Date 👩‍❤️‍👨`}
+            options={['Apple', 'Google']}
+            location='World Wide Web'
+            startDate='2024-02-14'
+            endDate='2024-02-14'
+            startTime='11:00'
+            endTime='22:00'
+            timeZone='Asia/Calcutta'
+            description='Valentine date with my love'
+            label='Schedule a date 😘'
+            lightMode='dark'
+          ></AddToCalendarButton>
+        </div>
+      )}
       {accepted ? <Confetti width={width} height={height} /> : null}
     </div>
   );
