@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        heart: "url('./src/assets/hearts.jpg')",
+        heart: "url('/public/hearts.jpg')",
       },
     },
   },
